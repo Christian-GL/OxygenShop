@@ -1,0 +1,199 @@
+
+.advertising {
+    margin-top: 4.5rem;
+    padding: 3rem 0;
+    text-align: center;
+    background-color: white;
+
+    &__first {
+        position: relative;
+        margin: 0 2rem;
+        padding: 1em;
+        border-radius: 0.5rem; 
+        border: 1px solid lightgray;
+        background-color: white;
+
+        &__rectangle1 {
+            margin: 0 0 4.5rem 7rem;
+        }
+        &__macbook {
+            position: absolute;
+            top: 12.5%;
+            left: 20%;
+        }
+        &__title {
+            text-align: left;
+            font-family: 'Raleway';
+            font-size: 2em;
+            font-weight: normal;
+            
+        }
+        &__text {
+            margin-top: 3rem;
+            text-align: left;
+            font-family: 'Open Sans';
+            font-size: 0.9em;
+            font-weight: normal;
+        }
+    }
+
+    &__shop {
+        position: relative;
+        margin: 3rem 2rem 0;
+        padding: 1em;
+        border-radius: 0.5rem;
+        border: 1px solid lightgray;
+        background-color: white;
+
+        &__ellipse3 {
+            position: relative;
+        }
+        &__iphone {
+            position: absolute;
+            top: 6%;
+            left: 30%;
+        }
+        &__title {
+            margin-top: 2rem;
+            font-family: 'Raleway';
+            font-size: 2em;
+            font-weight: normal;
+            text-align: left;
+        }
+        &__text {
+            margin-top: 1rem;
+            text-align: left;
+            font-family: 'Open Sans';
+            font-size: 0.9em;
+            font-weight: normal;
+        }
+    }
+
+    &__brand {
+        position: relative;
+        margin: 3rem 2rem 0;
+        border-radius: 0.5rem;
+        border: 1px solid lightgray;
+        background-color: white;
+
+        &__title {
+            margin-top: 1rem;
+            padding: 0 0.5em;
+            font-family: 'Raleway';
+            font-size: 2em;
+            font-weight: normal;
+            text-align: left;
+        }
+        &__text {
+            margin: 1rem 0.75rem 0 0;
+            padding: 0 1em;
+            text-align: left;
+            font-family: 'Open Sans';
+            font-size: 0.9em;
+            font-weight: normal;
+        }
+        &__rectangle2 {
+            position: relative;
+            margin-top: 1rem;
+        }
+        &__trumpet {
+            position: absolute;
+            top: 62.5%;
+            left: 0%;
+        }
+    }
+
+
+
+    @media only screen and (min-width: 1000px) {
+
+        &__first {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 20rem;
+            padding: 0;
+            
+            &__rectangle1 {
+                margin: 1.5rem 0 0 7rem;
+                order: 4;
+                width: 12.5em;
+                // width: 20%;
+            }
+            &__macbook {
+                order: 3;
+                top: 27.5%;
+                left: 52.5%;
+                width: 22.5em;
+                // width: 37.5%;
+            }
+            &__title {
+                margin: 4rem 0 0 2rem;
+                order: 1;
+                width: 50%;
+            }
+            &__text {
+                margin: 2rem 0 0 2rem;
+                order: 2;
+                width: 42.5%;
+            }
+        }
+
+        &__shop {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 20rem;
+            padding: 0;
+            
+            &__ellipse3 {
+                margin: 0.75rem 0 0 3.5rem;
+                width: 17em;
+                // width: 29%;
+                // transform: translate(-25%,-0%);
+                // flex-shrink: 0;
+            }
+            &__iphone {
+                top: 10%;
+                left: 7.5%;
+                width: 22.5em;
+                // width: 37.5%;
+            }
+            &__title {
+                margin: 4rem 0 0 10rem;
+                width: 30%;
+            }
+            &__text {
+                margin: 2rem 0 0 10rem;
+                width: 42.5%;
+            }
+        }
+
+        &__brand {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 20rem;
+            padding: 0;
+    
+            &__title {
+                margin: 4rem 0 0 10rem;
+                width: 30%;
+            }
+            &__text {
+                margin: 2rem 0 0 10rem;
+                width: 42.5%;
+            }
+            &__rectangle2 {
+                margin: 0.75rem 0 0 3.5rem;
+                width: 17em;
+            }
+            &__trumpet {
+                top: 10%;
+                left: 7.5%;
+                width: 22.5em;
+            }
+        }
+    }
+
+}

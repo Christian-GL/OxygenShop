@@ -1,0 +1,18 @@
+@import 'header.scss';
+@import 'shop.scss';
+@import 'popular.scss';
+@import 'advertising';
+@import 'prices';
+@import 'contact';
+@import 'footer';
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 320px;
+}

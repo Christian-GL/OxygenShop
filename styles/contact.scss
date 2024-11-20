@@ -1,0 +1,263 @@
+
+.contact {
+    margin-top: 6rem;
+    text-align: left;
+
+    &__title {
+        margin: 0 2rem 0;
+        font-family: 'Raleway';
+        font-size: 2.5rem;
+        font-weight: normal;
+        }
+
+    &__msg {
+        margin: 0.5rem 2rem 0;
+        font-family: 'Open Sans';
+        font-size: 1rem;
+        font-weight: normal;
+    }
+
+    &__info-mail {
+        position: relative;
+        margin-top: 2rem;
+
+        &__img-mail {
+            display: inline-block;
+            margin: 0 1rem 0 2rem;
+        }
+        &__text-mail {
+            display: inline-block;
+            position: absolute;
+            top: 10%;
+            left: 17.5%;
+            font-family: 'Open Sans';
+            font-weight: 600;
+            color: #A5A5A5;
+        }
+    }
+
+    &__info-phone {
+        position: relative;
+
+        &__img-phone {
+            display: inline-block;
+            margin: 0 1rem 0 2rem;
+        }
+        &__text-phone {
+            display: inline-block;
+            position: absolute;
+            top: 10%;
+            left: 17.5%;
+            font-family: 'Open Sans';
+            font-weight: 600;
+            color: #A5A5A5;
+        }
+    }
+
+    &__text-name {
+        margin: 2rem 0 0 2rem;
+        font-family: 'Open Sans';
+        font-size: 0.7em;
+        font-weight: 600;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: #08A6E4;
+    }
+    &__input-name {
+        margin: 1rem 0 0 2rem;
+        width: 82.5%;
+        border: 1px solid #95989A;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+    }
+    &__text-email {
+        margin: 2rem 0 0 2rem;
+        font-family: 'Open Sans';
+        font-size: 0.7em;
+        font-weight: 600;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: #08A6E4;
+    }
+    &__input-email {
+        margin: 1rem 0 0 2rem;
+        width: 82.5%;
+        border: 1px solid #95989A;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-color: #95989A;
+    }
+
+    &__terms{
+    position: relative;
+    margin-top: 2rem;
+
+        &__checkbox {
+            position: absolute;
+            // display: block;
+            // margin: 1rem 0 0 2rem;
+            top: 3.5%;
+            left: 8.5%;
+            width: 1.35rem;
+            height: 1.35rem;
+            background-color: none;
+
+            &:checked {
+                background-color: transparent;
+            }
+
+            &:checked::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-50deg)scaleX(-1);
+                width: 7px;
+                height: 3px;
+                border: solid #55DFB4;
+                border-width: 0 1px 1px 0;
+            }
+        }
+        &__text {
+            display: inline-block;
+            margin: 0 4rem 0 3.75rem;
+            // top: 15%;
+            // left: 15%;
+            font-family: 'Open Sans';
+            font-size: 0.7em;
+            font-weight: 400;
+            color: #707070;
+        }
+    }
+    &__btn {
+        margin: 2rem 0 0 8rem;
+        padding: 1.25rem 6rem;
+        font-family: 'Open Sans';
+        font-size: 0.75em;
+        font-weight: 700;
+        border: none;
+        border-radius: 2rem; 
+        cursor: pointer; 
+        color: white;
+        background-color: #08A6E4;
+    }
+
+
+
+    @media only screen and (min-width: 1000px) {
+
+        margin: 0;
+        margin: 6rem 8rem 5rem 8rem;
+        height: 20rem;
+        display: grid;
+        grid-template-rows: repeat(10, 10%);
+        grid-template-columns: repeat(2, 50%);
+        grid-row: 4 / span ;
+        grid-template-areas: "1-a 1-b"
+                             "2-a 2-b"
+                             "3-a 3-b"
+                             "4-a 4-b"
+                             "5-a 5-b"
+                             "6-a 6-b"
+                             "7-a 7-b"
+                             "8-a 8-b"
+                             "9-a 9-b"
+                            "10-a 10-b"
+                            "11-a 11-b";
+        align-items:flex-start;
+        // gap: 0.25rem;
+        // background-color: lightyellow;
+        // border: 1px solid black;
+
+        &__title {
+            grid-row: 1 / span 2;
+            grid-column: 1;
+            margin: 0;
+        }
+    
+        &__msg {
+            grid-row: 3;
+            grid-column: 1;
+            margin: 0;
+            font-size: 0.8em;
+        }
+    
+        &__info-mail {
+            grid-row: 5;
+            grid-column: 1;
+            margin: 0;
+            justify-self: left;
+    
+            &__img-mail {
+                margin: 0;
+            }
+            &__text-mail {
+                margin: 0;
+                left: 2.25rem;
+            }
+        }
+    
+        &__info-phone {
+            grid-row: 5;
+            grid-column: 1;
+            margin: 0 0 0 11rem;
+
+            &__img-phone {
+                margin: 0;
+            }
+            &__text-phone {
+                margin: 0;
+                left: 2.25rem;
+            }
+        }
+    
+        &__text-name {
+            grid-row: 1;
+            grid-column: 2;
+            margin: 0;
+        }
+        &__input-name {
+            grid-row: 2;
+            grid-column: 2;
+            margin: 0;
+            width: 100%;
+        }
+        &__text-email {
+            grid-row: 4;
+            grid-column: 2;
+            margin: 0;
+        }
+        &__input-email {
+            grid-row: 5;
+            grid-column: 2;
+            margin: 0;
+            width: 100%;
+        }
+    
+        &__terms {
+            grid-row: 6 / span 4;
+            grid-column: 2;
+            margin: 0;
+
+            &__checkbox {
+                margin: 0;
+                left: 0;
+            }
+            &__text {
+                margin: 0 0 0 2rem;
+                font-size: 0.63em;
+            }
+        }
+        &__btn {
+            grid-row: 10 / span 2;
+            grid-column: 2;
+            margin: 0 0 0 9rem;
+            width: 60%;
+            // padding: 1.25rem 2rem;
+        }
+
+    }
+
+}
