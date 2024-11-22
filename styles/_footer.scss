@@ -23,8 +23,8 @@
 
     &__nav {
         position: absolute;
-        top: 25%;
-        left: 75%;
+        top: 1.5rem;
+        right: 2.5rem;
 
         &__img-twitter {
             margin: 0.5rem 0.5rem 0 0;
@@ -32,13 +32,6 @@
         &__img-facebook {
             margin: 0.5rem 0 0 0.5rem;
         }
-    }
-
-
-
-    @media only screen and (min-width: 1000px) {
-
-        // align-items: center;
     }
 
 }

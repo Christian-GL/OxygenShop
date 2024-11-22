@@ -1,0 +1,223 @@
+
+.advertising {
+    margin-top: 7.5rem;
+    padding: 2rem;
+    text-align: center;
+    background-color: #F7F7F7;
+
+    &__art {
+        position: relative;
+        padding: 1em;
+        border-radius: 0.5rem; 
+        border: 1px solid lightgray;
+        background-color: white;
+
+        &--first {
+            @media only screen and (min-width: 1000px) {
+                display: flex;
+                // flex-direction: column;
+                // flex-wrap: wrap;
+                // justify-content: space-between;
+                // height: 20rem;
+                padding: 2em;
+            }
+        }
+        &--shop {
+            margin-top: 3rem;
+            @media only screen and (min-width: 1000px) {
+                display: flex;
+                // flex-direction: column;
+                // flex-wrap: wrap;
+                // height: 20rem;
+                padding: 2em;     
+            }
+        }
+        &--brand {
+            margin-top: 3rem;
+            padding: 0;
+            @media only screen and (min-width: 1000px) {
+                width: 60%;
+                padding: 2em; 
+            }
+        }
+
+        &__div-img {
+            position: relative;
+
+            &--first {
+                height: 10rem;
+                width: 15rem;
+                margin: 0 auto;
+                @media only screen and (min-width: 1000px) {
+                    order: 2;
+                }
+            }
+            &--shop {
+                height: 10rem;
+                width: 15rem;
+                margin: 0 auto;
+                @media only screen and (min-width: 1000px) {
+                           
+                }
+            }
+            &--brand {
+                @media only screen and (min-width: 1000px) {
+                    margin: 3rem 0 0 3rem;
+                    width: 40%;
+                }
+            }
+
+            &__rectangle1 {
+                margin-left: 4.5rem;
+                @media only screen and (min-width: 1000px) {
+                    // width: 12.5em;
+                    // margin: 1.5rem 0 0 7rem;
+                }
+            }
+            &__macbook {
+                position: absolute;
+                top: 15%;
+                left: 5%;
+                @media only screen and (min-width: 1000px) {
+                    // width: 16em;
+                    // top: 27.5%;
+                    // left: 52.5%;
+                }
+            }
+            &__ellipse3 {
+                @media only screen and (min-width: 1000px) {
+                    // margin: 0.75rem 0 0 3.5rem;
+                    // width: 17em;
+                }
+            }
+            &__iphone {
+                position: absolute;
+                top: 6%;
+                left: 25%;
+                @media only screen and (min-width: 1000px) {
+                    // top: 10%;
+                    // left: 7.5%;
+                    // width: 22.5em;
+                }
+            }
+            &__rectangle2 {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                max-height: 15rem;
+                border-radius: 0.5rem; 
+                @media only screen and (min-width: 1000px) {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &__trumpet {
+                position: absolute;
+                top: 2rem;
+                left: 0rem;
+                @media only screen and (min-width: 1000px) {
+                    // top: 10%;
+                    // left: 7.5%;
+                    // width: 22.5em;
+                }
+            }
+
+        }
+
+        &__div-info {
+
+            &--first {
+                @media only screen and (min-width: 1000px) {
+                    order: 1;
+                    width: 50%;
+                }
+            }
+            &--shop {
+                @media only screen and (min-width: 1000px) {
+                    width: 50%; 
+                }
+            }
+            &--brand {
+                @media only screen and (min-width: 1000px) {
+                    width: 100%;     
+                }
+            }
+
+            &__title {
+                text-align: left;
+                margin-top: 1rem;
+                font-family: 'Raleway';
+                font-size: 2em;
+                font-weight: normal;
+
+                &--first {
+                    @media only screen and (min-width: 1000px) {
+                        // margin: 4rem 0 0 2rem;
+                        // width: 50%;
+                    }
+                }
+                &--shop {
+                    @media only screen and (min-width: 1000px) {
+                        // margin: 4rem 0 0 10rem;
+                        // width: 30%;
+                    }
+                }
+                &--brand {
+                    padding: 0 0.5em;
+                    @media only screen and (min-width: 1000px) {
+                        padding: 0;
+                    }
+                }
+
+                
+            }
+            &__text {
+                margin-top: 1rem;
+                text-align: left;
+                font-family: 'Open Sans';
+                font-size: 0.9em;
+                font-weight: normal;
+                @media only screen and (min-width: 1000px) {
+                    padding-bottom: 1rem;
+                }
+
+                &--first {
+                    @media only screen and (min-width: 1000px) {
+                        border-bottom: 5px solid #f0446c;
+                    }  
+                }
+                &--shop {
+                    @media only screen and (min-width: 1000px) {
+                        border-bottom: 5px solid #2596be;
+                    }
+                }
+                &--brand {
+                    padding: 0 1em 1em;
+                    @media only screen and (min-width: 1000px) {
+                        padding: 0 0 1em 0;
+                        border-bottom: 5px solid #55DFB4;
+                    }
+                }
+            }
+            // &__separator {
+            //     // display: none;
+            //     width: 100%;
+            //     background-color: yellow;
+            //     @media only screen and (min-width: 1000px) {
+            //         // display: block;
+            //         width: 2rem;
+            //         height: 2rem;
+            //     }
+            // }
+
+        }
+    }
+
+    &__container-brand {
+
+        @media only screen and (min-width: 1000px) {
+            display: flex;    
+        }
+    }
+
+}
