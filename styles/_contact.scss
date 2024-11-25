@@ -5,25 +5,12 @@
     text-align: left;
 
     @media only screen and (min-width: 1000px) {
-        margin: 6rem 8rem;
-        padding: 0;
+        margin: 6rem auto;
         height: 20rem;
+        max-width: 1000px;
         display: grid;
-        grid-template-rows: repeat(10, 10%);
+        grid-template-rows: repeat(11, 9.09%);
         grid-template-columns: repeat(2, 50%);
-        grid-row: 4 / span ;
-        grid-template-areas: "1-a 1-b"
-                             "2-a 2-b"
-                             "3-a 3-b"
-                             "4-a 4-b"
-                             "5-a 5-b"
-                             "6-a 6-b"
-                             "7-a 7-b"
-                             "8-a 8-b"
-                             "9-a 9-b"
-                            "10-a 10-b"
-                            "11-a 11-b";
-        align-items:flex-start;            
     }
 
     &__title {
@@ -50,10 +37,10 @@
         }
     }
 
-    &__div-info {
+    &__container-info {
         position: relative;
 
-        &__div-mail {
+        &__container-mail {
             margin-top: 2rem;
             @media only screen and (min-width: 1000px) {
                 grid-row: 5;
@@ -62,7 +49,7 @@
                 justify-self: left;
             }
         }
-        &__div-phone {
+        &__container-phone {
             @media only screen and (min-width: 1000px) {        
                 grid-row: 5;
                 grid-column: 1;
@@ -71,17 +58,14 @@
         }
 
         &__img {
-            display: inline-block;
-            // margin: 0 1rem 0 2rem;
             @media only screen and (min-width: 1000px) {
                 margin: 0;
             }
         }
         &__text {
             display: inline-block;
-            position: absolute;
-            top: 0.25rem;
-            left: 2.5rem;
+            vertical-align: top;
+            padding: 0.25em 0 0 0.5em;
             font-family: 'Open Sans';
             font-weight: 600;
             color: #A5A5A5;
@@ -92,7 +76,7 @@
         }
     }
 
-    &__name-input {
+    &__title-input {
         margin-top: 2rem;
         font-family: 'Open Sans';
         font-size: 0.7em;
@@ -137,7 +121,7 @@
         }
     }
 
-    &__div-terms {
+    &__container-terms {
         position: relative;
         margin-top: 2rem;
         @media only screen and (min-width: 1000px) {
@@ -149,11 +133,6 @@
             position: absolute;
             top: 0.25rem;
             left: 1rem;
-            width: 1.35rem;
-            height: 1.35rem;
-            border: 2px solid #bcbcbc;
-            border-radius: 2px;
-            accent-color: #FFFFFF;
             @media only screen and (min-width: 1000px) {
                 margin: 0;
                 left: 0;
@@ -189,7 +168,7 @@
             border: none;
             border-radius: 2rem; 
             cursor: pointer; 
-            color: white;
+            color: #FFFFFF;
             background-color: #08A6E4;
         }
     }

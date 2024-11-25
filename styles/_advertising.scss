@@ -4,21 +4,26 @@
     padding: 2rem;
     text-align: center;
     background-color: #F7F7F7;
+    @media only screen and (min-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    // eje x
+        align-items: center;        // eje y
+        margin: 7.5rem auto;
+        min-width: 1000px;
+        max-width: 1000px;
+    }
 
-    &__art {
+    &__card {
         position: relative;
         padding: 1em;
         border-radius: 0.5rem; 
         border: 1px solid lightgray;
-        background-color: white;
+        background-color: #FFFFFF;
 
         &--first {
             @media only screen and (min-width: 1000px) {
                 display: flex;
-                // flex-direction: column;
-                // flex-wrap: wrap;
-                // justify-content: space-between;
-                // height: 20rem;
                 padding: 2em;
             }
         }
@@ -26,78 +31,111 @@
             margin-top: 3rem;
             @media only screen and (min-width: 1000px) {
                 display: flex;
-                // flex-direction: column;
-                // flex-wrap: wrap;
-                // height: 20rem;
                 padding: 2em;     
             }
         }
         &--brand {
             margin-top: 3rem;
             padding: 0;
+            // border-bottom: 0px;
+            // border-end-start-radius: 0;
+            // border-end-end-radius: 0;
             @media only screen and (min-width: 1000px) {
-                width: 60%;
-                padding: 2em; 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;  
+                padding: 2em;
+                height: 20rem;  // 320px
+                // border-bottom: 1px solid lightgray;
             }
         }
 
-        &__div-img {
+        &__container-img {
             position: relative;
 
             &--first {
-                height: 10rem;
                 width: 15rem;
+                height: 10rem;
                 margin: 0 auto;
                 @media only screen and (min-width: 1000px) {
                     order: 2;
+                    width: 60%;
+                    height: 20rem;  // 320px
                 }
             }
             &--shop {
-                height: 10rem;
                 width: 15rem;
+                height: 10rem;
                 margin: 0 auto;
                 @media only screen and (min-width: 1000px) {
-                           
+                    width: 60%;
+                    height: 20rem;  // 320px
                 }
             }
             &--brand {
                 @media only screen and (min-width: 1000px) {
-                    margin: 3rem 0 0 3rem;
-                    width: 40%;
+                    padding: 3rem 0 0 3rem;
+                    width: 100%;
                 }
             }
 
             &__rectangle1 {
                 margin-left: 4.5rem;
                 @media only screen and (min-width: 1000px) {
-                    // width: 12.5em;
-                    // margin: 1.5rem 0 0 7rem;
+                    display: none;
                 }
             }
             &__macbook {
                 position: absolute;
-                top: 15%;
-                left: 5%;
+                top: 1.5rem;
+                left: 0.5rem;
                 @media only screen and (min-width: 1000px) {
-                    // width: 16em;
-                    // top: 27.5%;
-                    // left: 52.5%;
+                    display: none;
+                }
+            }
+            &__rectangle1-2 {
+                display: none;
+                @media only screen and (min-width: 1000px) {
+                    display: block;
+                    margin: 1rem 0 0 15rem;
+                }
+            }
+            &__macbook-2 {
+                display: none;
+                @media only screen and (min-width: 1000px) {
+                    display: block;
+                    position: absolute;
+                    top: 5rem;
+                    right: 2rem;
                 }
             }
             &__ellipse3 {
                 @media only screen and (min-width: 1000px) {
-                    // margin: 0.75rem 0 0 3.5rem;
-                    // width: 17em;
+                    display: none;
                 }
             }
             &__iphone {
                 position: absolute;
-                top: 6%;
-                left: 25%;
+                top: 1rem;
+                left: 4rem;
                 @media only screen and (min-width: 1000px) {
-                    // top: 10%;
-                    // left: 7.5%;
-                    // width: 22.5em;
+                    display: none;
+                }
+            }
+            &__ellipse3-2 {
+                display: none;
+                @media only screen and (min-width: 1000px) {
+                    display: block;
+                    margin-left: 3rem;
+                }
+            }
+            &__iphone-2 {
+                display: none;
+                @media only screen and (min-width: 1000px) {
+                    display: block;
+                    position: absolute;
+                    top: 1rem;
+                    left: 3rem;
                 }
             }
             &__rectangle2 {
@@ -105,10 +143,8 @@
                 width: 100%;
                 height: 100%;
                 max-height: 15rem;
-                border-radius: 0.5rem; 
                 @media only screen and (min-width: 1000px) {
-                    width: 100%;
-                    height: 100%;
+                    display: none;
                 }
             }
             &__trumpet {
@@ -116,15 +152,35 @@
                 top: 2rem;
                 left: 0rem;
                 @media only screen and (min-width: 1000px) {
-                    // top: 10%;
-                    // left: 7.5%;
-                    // width: 22.5em;
+                    display: none;
+                }
+            }
+            &__rectangle2-2 {
+                display: none;
+                @media only screen and (min-width: 1000px) {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &__trumpet-2 {
+                display: none;
+                position: absolute;
+                top: 7rem;
+                left: 5.5rem;
+                @media only screen and (min-width: 1000px) {
+                    display: block;
                 }
             }
 
         }
 
-        &__div-info {
+        &__container-info {
+            @media only screen and (min-width: 1000px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;        
+            }
 
             &--first {
                 @media only screen and (min-width: 1000px) {
@@ -134,12 +190,13 @@
             }
             &--shop {
                 @media only screen and (min-width: 1000px) {
-                    width: 50%; 
+                    width: 50%;
                 }
             }
             &--brand {
+                padding: 1em;
                 @media only screen and (min-width: 1000px) {
-                    width: 100%;     
+                    padding: 0;    
                 }
             }
 
@@ -150,26 +207,16 @@
                 font-size: 2em;
                 font-weight: normal;
 
-                &--first {
-                    @media only screen and (min-width: 1000px) {
-                        // margin: 4rem 0 0 2rem;
-                        // width: 50%;
-                    }
-                }
                 &--shop {
                     @media only screen and (min-width: 1000px) {
-                        // margin: 4rem 0 0 10rem;
-                        // width: 30%;
+                        padding-right: 5em;
                     }
                 }
                 &--brand {
-                    padding: 0 0.5em;
                     @media only screen and (min-width: 1000px) {
-                        padding: 0;
+                        padding: 0 5rem 0 0;
                     }
-                }
-
-                
+                }      
             }
             &__text {
                 margin-top: 1rem;
@@ -178,45 +225,48 @@
                 font-size: 0.9em;
                 font-weight: normal;
                 @media only screen and (min-width: 1000px) {
-                    padding-bottom: 1rem;
+                    margin: 2rem 0 2rem;
+                    padding-bottom: 3rem;
                 }
 
                 &--first {
                     @media only screen and (min-width: 1000px) {
+                        position: relative;
                         border-bottom: 5px solid #f0446c;
                     }  
                 }
                 &--shop {
                     @media only screen and (min-width: 1000px) {
+                        position: relative;
                         border-bottom: 5px solid #2596be;
                     }
                 }
                 &--brand {
-                    padding: 0 1em 1em;
                     @media only screen and (min-width: 1000px) {
-                        padding: 0 0 1em 0;
+                        position: relative;
+                        width: 90%;
                         border-bottom: 5px solid #55DFB4;
                     }
                 }
             }
-            // &__separator {
-            //     // display: none;
-            //     width: 100%;
-            //     background-color: yellow;
-            //     @media only screen and (min-width: 1000px) {
-            //         // display: block;
-            //         width: 2rem;
-            //         height: 2rem;
-            //     }
-            // }
+            &__text:after {
+                @media only screen and (min-width: 1000px) {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 25%;
+                    bottom: -5px;
+                    right: 0;
+                    border: 5px solid #FFFFFF;
+                }
+            }
 
         }
     }
 
     &__container-brand {
-
         @media only screen and (min-width: 1000px) {
-            display: flex;    
+            display: flex;
         }
     }
 

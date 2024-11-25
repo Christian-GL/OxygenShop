@@ -3,6 +3,10 @@
     
     &__nav {
         box-shadow: 0 0.25rem 0.25rem lightgray;
+        @media only screen and (min-width: 1000px) {
+            display: flex;
+            justify-content: space-between;
+        }
 
         &__title {
             padding: 0.5em;
@@ -10,12 +14,47 @@
             font-size: 2em;
             font-weight: 300;
             color: #2596be;
+            @media only screen and (min-width: 1000px) {
+                padding-left: 1em;        
+            }
         }
-
         &__img {
             position: absolute;
             top: 2rem;
             right: 2rem;
+            @media only screen and (min-width: 1000px) {
+                display: none;
+            }
+        }
+
+        &__container {
+            @media only screen and (min-width: 1000px) {
+                text-align: right;
+            }
+            
+            &__menu {
+                display: none;
+                @media only screen and (min-width: 1000px) {
+                    display: inline-block;
+                    list-style: none;
+                    font-family: 'Open Sans';
+                    font-size: 0.8em;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 0.25em;
+                }
+                &__option {
+                    display: inline-block;
+                    margin-right: 3rem;
+                    padding: 2em 0.75em;
+                    color: #A5A5A5;
+
+                    &--whyus {
+                        color: #000000;
+                        border-bottom: 5px solid #08A6E4;
+                    }
+                }
+            }
         }
     }
 

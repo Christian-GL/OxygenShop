@@ -24,7 +24,7 @@
         font-weight: 700;
         border: none;
         border-radius: 2rem; 
-        color: white;
+        color: #FFFFFF;
         background-color: #08A6E4;
         @media only screen and (min-width: 1000px) {
             cursor: pointer;
@@ -32,22 +32,20 @@
     }
 
     &__img {
-        &--mobile {
-            display: block;
+
+        &__mobile {
             margin-top: 2rem;
             width: 100%;
-        }
-        &--desktop {
-            display: none;
-        }
-        @media only screen and (min-width: 1000px) {
-            &--mobile {
-                display: none;
+            @media only screen and (min-width: 1000px) {
+                display: none; 
             }
-            &--desktop {
+        }
+        &__desktop {
+            display: none;
+            @media only screen and (min-width: 1000px) {
                 display: block;
                 margin-top: 2rem;
-                width: 100%;
+                width: 100%;  
             }
         }
     }
