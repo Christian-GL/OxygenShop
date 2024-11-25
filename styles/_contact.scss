@@ -129,18 +129,35 @@
             grid-column: 2;
             margin-top: 1rem;        
         }
+        
         &__checkbox {
             position: absolute;
-            top: 0.25rem;
-            left: 1rem;
-            @media only screen and (min-width: 1000px) {
-                margin: 0;
-                left: 0;
+            width: 1.5rem;
+            height: 1.5rem;
+            appearance: none;
+            border: 1px solid #95989A;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:checked {
+                background-color: transparent;
+            }
+            &:checked::before {
+                content: "";
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-50deg)scaleX(-1);
+                width: 0.7rem;
+                height: 0.4rem;
+                border: solid #08A6E4;
+                border-width: 0 1px 1px 0;
             }
         }
         &__text-terms {
             display: inline-block;
-            margin-left: 3.75rem;
+            margin-left: 2rem;
+            padding-right: 2em;
             font-family: 'Open Sans';
             font-size: 0.7em;
             font-weight: 400;

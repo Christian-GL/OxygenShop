@@ -61,7 +61,7 @@
             &--basic {
                 padding: 4.5em 2em 0;
                 @media only screen and (min-width: 1000px) {
-                    padding: 0 0 1em 0;
+                    padding: 0 0 1.4em 0;
                 }
             }
             &--professional {
@@ -85,6 +85,9 @@
                 font-family: 'Open Sans';
                 font-size: 2.75em;
                 font-weight: 300;
+                @media only screen and (min-width: 1000px) {
+                    margin-top: 1rem;
+                }
 
                 &--basic {
                     color: #FB3B64;
@@ -100,6 +103,9 @@
                 font-family: 'Raleway';
                 font-size: 0.75em;
                 font-weight: 700;
+                @media only screen and (min-width: 1000px) {
+                    margin-top: 0.5rem;   
+                }
             }
         }
         &__container-advantages {
@@ -167,6 +173,15 @@
                     background-color: #55DFB4;
                 }
             }
+        }
+    }
+
+    &__card:hover {
+        @media only screen and (min-width:1000px) {
+            transform: scale(1.1);
+            box-shadow: 0 0.5rem 1rem gray;
+            transition: 0.5s;
+            cursor: pointer;
         }
     }
 
