@@ -3,7 +3,6 @@
     margin-top: 6rem;
     padding: 0 2rem;
     text-align: left;
-
     @media only screen and (min-width: 1000px) {
         margin: 6rem auto;
         height: 20rem;
@@ -129,7 +128,7 @@
             grid-column: 2;
             margin-top: 1rem;        
         }
-        
+
         &__checkbox {
             position: absolute;
             width: 1.5rem;
