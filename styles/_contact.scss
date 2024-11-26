@@ -8,8 +8,8 @@
         height: 20rem;
         max-width: 1000px;
         display: grid;
-        grid-template-rows: repeat(11, 9.09%);
-        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(11, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     &__title {
@@ -104,6 +104,7 @@
         border-right: none;
         border-left: none;
         border-color: #95989A;
+        outline: none;
         @media only screen and (min-width: 1000px) {
             &--name {
                 grid-row: 2;
