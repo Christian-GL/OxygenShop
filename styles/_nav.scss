@@ -64,52 +64,53 @@
         margin-top: 6rem;
         text-align: center;
 
-    &__title {
-        font-family: 'Raleway';
-        font-size: 2.25em;
-        font-weight: normal;
-    }
-
-    &__text {
-        margin-top: 1.5rem;
-        padding: 0 3rem;
-        font-family: 'Open Sans';
-        font-weight: normal;
-    }
-
-    &__btn {
-        margin-top: 2rem;
-        padding: 1.35rem 6rem;
-        font-family: 'Open Sans';
-        font-size: 1em;
-        font-weight: 700;
-        border: none;
-        border-radius: 2rem; 
-        color: #FFFFFF;
-        background-color: #08A6E4;
-        @media only screen and (min-width: 1000px) {
-            cursor: pointer;
+        &__title {
+            font-family: 'Raleway';
+            font-size: 3em;
+            font-weight: normal;
         }
-    }
 
-    &__img {
+        &__text {
+            margin-top: 1.5rem;
+            padding: 0 3rem;
+            font-family: 'Open Sans';
+            font-weight: normal;
+        }
 
-        &__mobile {
+        &__btn {
             margin-top: 2rem;
-            width: 100%;
+            padding: 1.35em 6em;
+            font-family: 'Open Sans';
+            font-size: 1em;
+            font-weight: 700;
+            border: none;
+            border-radius: 2rem; 
+            color: #FFFFFF;
+            background-color: #08A6E4;
             @media only screen and (min-width: 1000px) {
-                display: none; 
+                padding: 1.35em 10em;
+                cursor: pointer;
             }
         }
-        &__desktop {
-            display: none;
-            @media only screen and (min-width: 1000px) {
-                display: block;
+
+        &__img {
+
+            &__mobile {
                 margin-top: 2rem;
-                width: 100%;  
+                width: 100%;
+                @media only screen and (min-width: 1000px) {
+                    display: none; 
+                }
+            }
+            &__desktop {
+                display: none;
+                @media only screen and (min-width: 1000px) {
+                    display: block;
+                    margin-top: 2rem;
+                    width: 100%;  
+                }
             }
         }
-    }
     }
 
 }
