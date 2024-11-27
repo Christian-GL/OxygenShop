@@ -41,6 +41,7 @@
 @media only screen and (min-width: 1000px) {
   .header__nav__container__menu {
     display: inline-block;
+    text-align: center;
     list-style: none;
     font-family: "Open Sans";
     font-size: 0.8em;
@@ -52,11 +53,12 @@
 .header__nav__container__menu__option {
   display: inline-block;
   margin-right: 3rem;
-  padding: 2em 0.75em;
+  padding: 1.8em 0.75em;
+  height: auto;
   cursor: pointer;
   color: #A5A5A5;
 }
-.header__nav__container__menu__option--whyus {
+.header__nav__container__menu__option:hover {
   color: #000000;
   border-bottom: 5px solid #08A6E4;
 }
@@ -681,6 +683,7 @@
     display: flex;
     justify-content: center;
     margin: 7rem 0 3rem 0;
+    padding: 0;
   }
 }
 @media only screen and (min-width: 1000px) {

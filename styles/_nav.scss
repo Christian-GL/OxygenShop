@@ -37,6 +37,7 @@
                 display: none;
                 @media only screen and (min-width: 1000px) {
                     display: inline-block;
+                    text-align: center;
                     list-style: none;
                     font-family: 'Open Sans';
                     font-size: 0.8em;
@@ -47,11 +48,12 @@
                 &__option {
                     display: inline-block;
                     margin-right: 3rem;
-                    padding: 2em 0.75em;
+                    padding: 1.8em 0.75em;
+                    height: auto;
                     cursor: pointer;
                     color: #A5A5A5;
 
-                    &--whyus {
+                    &:hover {
                         color: #000000;
                         border-bottom: 5px solid #08A6E4;
                     }
