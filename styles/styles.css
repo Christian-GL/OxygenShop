@@ -12,12 +12,12 @@
   font-family: "Raleway";
   font-size: 2em;
   font-weight: 300;
-  cursor: pointer;
   color: #2596be;
 }
 @media only screen and (min-width: 1000px) {
   .header__nav__title {
     padding-left: 1em;
+    cursor: pointer;
   }
 }
 .header__nav__img {
@@ -651,8 +651,12 @@
   font-family: "Open Sans";
   border: none;
   border-radius: 2rem;
-  cursor: pointer;
   color: #FFFFFF;
+}
+@media only screen and (min-width: 1000px) {
+  .prices__card__container-btn__btn {
+    cursor: pointer;
+  }
 }
 .prices__card__container-btn__btn--basic {
   background-color: #f0446c;
@@ -798,7 +802,11 @@
           appearance: none;
   border: 1px solid #95989A;
   border-radius: 5px;
-  cursor: pointer;
+}
+@media only screen and (min-width: 1000px) {
+  .contact__container-right__container-terms__checkbox {
+    cursor: pointer;
+  }
 }
 .contact__container-right__container-terms__checkbox:checked {
   background-color: transparent;
@@ -841,9 +849,13 @@
   font-weight: 700;
   border: none;
   border-radius: 2rem;
-  cursor: pointer;
   color: #FFFFFF;
   background-color: #08A6E4;
+}
+@media only screen and (min-width: 1000px) {
+  .contact__container-right__container-btn__btn {
+    cursor: pointer;
+  }
 }
 
 .footer {
@@ -884,11 +896,19 @@
 }
 .footer__nav__img-twitter {
   margin: 0.5rem 0.5rem 0 0;
-  cursor: pointer;
+}
+@media only screen and (min-width: 1000px) {
+  .footer__nav__img-twitter {
+    cursor: pointer;
+  }
 }
 .footer__nav__img-facebook {
   margin: 0.5rem 0 0 0.5rem;
-  cursor: pointer;
+}
+@media only screen and (min-width: 1000px) {
+  .footer__nav__img-facebook {
+    cursor: pointer;
+  }
 }
 
 * {

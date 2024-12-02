@@ -13,10 +13,10 @@
             font-family: 'Raleway';
             font-size: 2em;
             font-weight: 300;
-            cursor: pointer;
             color: #2596be;
             @media only screen and (min-width: 1000px) {
-                padding-left: 1em;        
+                padding-left: 1em;
+                cursor: pointer;
             }
         }
         &__img {

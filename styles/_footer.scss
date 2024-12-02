@@ -34,11 +34,15 @@
 
         &__img-twitter {
             margin: 0.5rem 0.5rem 0 0;
-            cursor: pointer;
+            @media only screen and (min-width: 1000px) {
+                cursor: pointer;
+            }
         }
         &__img-facebook {
             margin: 0.5rem 0 0 0.5rem;
-            cursor: pointer;
+            @media only screen and (min-width: 1000px) {
+                cursor: pointer;
+            }
         }
     }
 

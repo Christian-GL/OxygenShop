@@ -160,8 +160,10 @@
                 font-family: 'Open Sans';
                 border: none;
                 border-radius: 2rem;
-                cursor: pointer;
                 color: #FFFFFF;
+                @media only screen and (min-width: 1000px) {
+                    cursor: pointer;
+                }
             
                 &--basic {
                     background-color: #f0446c;

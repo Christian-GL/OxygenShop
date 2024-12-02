@@ -113,7 +113,9 @@
                 appearance: none;
                 border: 1px solid #95989A;
                 border-radius: 5px;
-                cursor: pointer;
+                @media only screen and (min-width: 1000px) {
+                    cursor: pointer;
+                }
 
                 &:checked {
                     background-color: transparent;
@@ -148,6 +150,7 @@
         &__container-btn {
             text-align: right;
             margin-top: 2rem;
+
             &__btn {
                 padding: 1.25rem 6rem;
                 font-family: 'Open Sans';
@@ -155,9 +158,11 @@
                 font-weight: 700;
                 border: none;
                 border-radius: 2rem; 
-                cursor: pointer; 
                 color: #FFFFFF;
                 background-color: #08A6E4;
+                @media only screen and (min-width: 1000px) {
+                    cursor: pointer;
+                }
             }
         }
     }
