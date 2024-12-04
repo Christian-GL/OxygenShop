@@ -37,29 +37,39 @@
 }
 .header__nav__container__menu {
   display: none;
+  flex-direction: row;
+  list-style: none;
+  font-family: "Open Sans";
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
 }
 @media only screen and (min-width: 1000px) {
   .header__nav__container__menu {
-    display: inline-block;
-    text-align: center;
-    list-style: none;
-    font-family: "Open Sans";
-    font-size: 0.8em;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
+    display: flex;
   }
 }
 .header__nav__container__menu__option {
-  display: inline-block;
-  margin-right: 3rem;
-  padding: 1.8em 0.75em;
+  margin-left: 1.5rem;
+  padding: 0.75em 0;
   cursor: pointer;
   color: #A5A5A5;
 }
+@media only screen and (min-width: 1000px) {
+  .header__nav__container__menu__option {
+    display: inline-block;
+    margin: 0 3rem 0 0;
+    padding: 1.8em 0.75em;
+  }
+}
 .header__nav__container__menu__option:hover {
   color: #000000;
-  border-bottom: 5px solid #08A6E4;
+}
+@media only screen and (min-width: 1000px) {
+  .header__nav__container__menu__option:hover {
+    border-bottom: 5px solid #08A6E4;
+  }
 }
 .header__shop {
   margin-top: 6rem;
@@ -111,6 +121,15 @@
     margin-top: 2rem;
     width: 100%;
   }
+}
+.header__page-scroll {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0.5rem;
+  background-color: #08A6E4;
 }
 
 .popular {
@@ -487,6 +506,15 @@
   font-size: 2em;
   font-weight: normal;
 }
+.prices__coin-type {
+  margin-top: 2.5rem;
+  padding: 0.5em;
+  border-radius: 1rem;
+  font-family: "Open Sans";
+  font-size: 2em;
+  font-weight: 400;
+  border: 1px solid #000000;
+}
 .prices__container {
   padding-top: 3em;
 }
@@ -842,7 +870,7 @@
   text-align: right;
   margin-top: 2rem;
 }
-.contact__container-right__container-btn__btn {
+.contact__container-right__container-btn__send {
   padding: 1.25rem 6rem;
   font-family: "Open Sans";
   font-size: 0.75em;
@@ -853,7 +881,7 @@
   background-color: #08A6E4;
 }
 @media only screen and (min-width: 1000px) {
-  .contact__container-right__container-btn__btn {
+  .contact__container-right__container-btn__send {
     cursor: pointer;
   }
 }
@@ -917,6 +945,26 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-width: 320px;
+}
+
+#return-top {
+  position: fixed;
+  z-index: 1;
+  width: 3.5rem;
+  height: 3.5rem;
+  right: 2rem;
+  bottom: 3.5rem;
+  font-size: 1.5em;
+  cursor: pointer;
+  border-radius: 50%;
+  visibility: hidden;
+  border: 1px solid black;
+  color: #FFFFFF;
+  background-color: #08A6E4;
 }/*# sourceMappingURL=styles.css.map */

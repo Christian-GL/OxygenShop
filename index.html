@@ -12,13 +12,26 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
 
-    <script src="scripts/Persona.js" defer></script>
-    <script src="scripts/Panadero.js" defer></script>
-    <script src="scripts/DomHandler.js" defer></script>
-    <script src="scripts/API.js" defer></script>
-    <script src="scripts/PersonsAPI.js" defer></script>
-    <script src="scripts/script.js" defer></script>
+    <!-- <script src="scripts-plantilla/Persona.js" defer></script>
+    <script src="scripts-plantilla/Panadero.js" defer></script>
+    <script src="scripts-plantilla/DomHandler.js" defer></script>
+    <script src="scripts-plantilla/API.js" defer></script>
+    <script src="scripts-plantilla/PersonsAPI.js" defer></script>
+    <script src="scripts-plantilla/script.js" defer></script> -->
 
+    <script src="js/components/Hamburguer.js" defer></script>
+    <script src="js/components/PercentageScroller.js" defer></script>
+    <script src="js/components/ReturnToTheTop.js" defer></script>
+    <script src="js/components/FormValidator.js" defer></script>
+    
+    <script src="js/api/CoinConversions.js" defer></script>
+    <script src="js/api/DomHandler.js" defer></script>
+    <script src="js/api/API.js" defer></script>
+    <script src="js/api/APICoin.js" defer></script>
+    <script src="js/api/CoinConverter.js" defer></script>
+
+    <script src="js/index.js" defer></script>
+    
     <title>OXYGEN Shop</title>
 </head>
 
@@ -36,7 +49,7 @@
                 </ul>
             </div>
         </nav>
-
+        <div class="header__page-scroll"></div>
         <div class="header__shop">
             <h2 class="header__shop__title">Sell More!</h2>
             <h4 class="header__shop__text">Open shop on our platform and increase your sales</h4>
@@ -125,12 +138,16 @@
 
         <section class="prices">
             <h2 class="prices__title">Pricing</h2>
+            <select class="prices__coin-type" id="prices__coin-type">
+                <option value="1" selected="selected">$</option>
+                <option value="2">€</option>
+                <option value="3">£</option>
+            </select>
             <div class="prices__container">
                 <article class="prices__card prices__card--basic">
                     <div class="prices__card__container-plan prices__card__container-plan--basic">
                         <h3 class="prices__card__container-plan__title">Basic</h3>
-                        <h2 class="prices__card__container-plan__price prices__card__container-plan__price--basic">$0
-                        </h2>
+                        <h2 class="prices__card__container-plan__price prices__card__container-plan__price--basic" id="prices__card__container-plan__price--basic">$0</h2>
                     </div>
                     <div class="prices__card__container-advantages">
                         <ul class="prices__card__container-advantages__list">
@@ -170,9 +187,7 @@
                 <article class="prices__card prices__card--professional">
                     <div class="prices__card__container-plan prices__card__container-plan--professional">
                         <h3 class="prices__card__container-plan__title">Professional</h3>
-                        <h2
-                            class="prices__card__container-plan__price prices__card__container-plan__price--professional">
-                            $25</h2>
+                        <h2 class="prices__card__container-plan__price prices__card__container-plan__price--professional" id="prices__card__container-plan__price--professional">$25</h2>
                         <h5 class="prices__card__container-plan__info">Limited offer</h5>
                     </div>
                     <div class="prices__card__container-advantages">
@@ -213,8 +228,7 @@
                 <article class="prices__card prices__card--premium">
                     <div class="prices__card__container-plan prices__card__container-plan--premium">
                         <h3 class="prices__card__container-plan__title">Premium</h3>
-                        <h2 class="prices__card__container-plan__price prices__card__container-plan__price--premium">$60
-                        </h2>
+                        <h2 class="prices__card__container-plan__price prices__card__container-plan__price--premium" id="prices__card__container-plan__price--premium">$60</h2>
                         <h5 class="prices__card__container-plan__info">Limited offer</h5>
                     </div>
                     <div class="prices__card__container-advantages">
@@ -273,12 +287,12 @@
             </div>
             <div class="contact__container-right">
                 <h5 class="contact__container-right__title-input">name</h5>
-                <input class="contact__container-right__input">
+                <input class="contact__container-right__input" id="contact__container-right__input-name">
                 <h5 class="contact__container-right__title-input">email</h5>
-                <input class="contact__container-right__input">
+                <input class="contact__container-right__input" id="contact__container-right__input-email">
 
                 <div class="contact__container-right__container-terms">
-                    <input class="contact__container-right__container-terms__checkbox" type="checkbox" checked>
+                    <input class="contact__container-right__container-terms__checkbox" id="contact__container-right__container-terms__checkbox" type="checkbox" checked>
                     <p class="contact__container-right__container-terms__text-terms">I hereby give consent for my
                         personal data included in my application to be processed for the purposes of the recruitment
                         process under the European Parliament’s and Council of the European Union Regulation on the
@@ -288,10 +302,12 @@
                 </div>
 
                 <div class="contact__container-right__container-btn">
-                    <button class="contact__container-right__container-btn__btn">Send</button>
+                    <button class="contact__container-right__container-btn__send" id="contact__container-right__container-btn__send">Send</button>
                 </div>
             </div>
         </section>
+
+        <button id="return-top">🠉</button>
     </main>
 
     <footer class="footer">

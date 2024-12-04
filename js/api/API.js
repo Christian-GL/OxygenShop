@@ -5,14 +5,14 @@ class API {
         this.url = url
     }
 
-    async getPersonas(processInfo) {
+    async getExchange(processData) {
 
         const request = await fetch(this.url)
         
         if (request.ok) {
             try {
                 const json = await request.json()
-                processInfo(json)
+                processData(json)
             }
             catch (error) {
                 console.log('Error con la respuesta de la API')

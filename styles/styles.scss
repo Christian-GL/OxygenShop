@@ -1,9 +1,10 @@
 @import '_nav.scss';
 @import '_popular.scss';
-@import '_advertising';
-@import '_prices';
-@import '_contact';
-@import '_footer';
+@import '_advertising.scss';
+@import '_prices.scss';
+@import '_contact.scss';
+@import '_footer.scss';
+
 
 
 * {
@@ -12,6 +13,26 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-width: 320px;
+}
+
+#return-top {
+    position: fixed;
+    z-index: 1;
+    width: 3.5rem;
+    height: 3.5rem;
+    right: 2rem;
+    bottom: 3.5rem;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 50%;
+    visibility: hidden;
+    border: 1px solid black;
+    color: #FFFFFF;
+    background-color: #08A6E4;
 }
