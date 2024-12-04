@@ -46,10 +46,12 @@ class FormValidator {
 
     checkAllValidations(inputName, inputEmail, checkbox) {
         if (!this.nameValidation(inputName)) {
+            alert('El nombre debe tener entre 2 y 100 carácteres')
             inputName.style.border = '1px solid red'
             return false
         }
         if (!this.emailValidation(inputEmail)) {
+            alert('Formato de email incorrecto')
             inputEmail.style.border = '1px solid red'
             return false
         }

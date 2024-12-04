@@ -9,13 +9,10 @@ class APICoin extends API {
 
     processData(json) {
         try {
-            console.log(json)
             let usd = 1; usd = usd.toFixed(2)
             let eur = json.usd.eur.toFixed(2)
             let gbp = json.usd.gbp.toFixed(2)
 
-            console.log(`${usd}$ = ${eur}€ = ${gbp}£`)
-            // new CoinConversions(usd, eur, gbp)
             const coinConversions = new CoinConversions(usd, eur, gbp)
             const coinConverter = new CoinConverter(coinConversions)
             coinConverter.switchCoinType()

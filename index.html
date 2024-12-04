@@ -12,17 +12,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
 
-    <script src="js/components/HamburgerMenu.js" defer></script>
-    <script src="js/components/PercentageScroller.js" defer></script>
-    <script src="js/components/ReturnToTheTop.js" defer></script>
-    <script src="js/components/FormValidator.js" defer></script>
-    
     <script src="js/api/CoinConversions.js" defer></script>
     <script src="js/api/CoinConverter.js" defer></script>
     <script src="js/api/DomHandler.js" defer></script>
     <script src="js/api/API.js" defer></script>
     <script src="js/api/APICoin.js" defer></script>
 
+    <script src="js/components/HamburgerMenu.js" defer></script>
+    <script src="js/components/PercentageScroller.js" defer></script>
+    <script src="js/components/ReturnToTheTop.js" defer></script>
+    <script src="js/components/FormValidator.js" defer></script>
+    <script src="js/components/Popup.js" defer></script>
+    <script src="js/components/slider.js" defer></script>
     <script src="js/index.js" defer></script>
     
     <title>OXYGEN Shop</title>
@@ -54,6 +55,13 @@
     </header>
 
     <main class="main">
+        <section class="popup" id="popup">
+            <h2 class="popup__title">Suscribe to<br>our newsletter</h2>
+            <input class="popup__email" id="popup__email">
+            <button class="popup__btn" id="popup__btn">Suscribe!</button>
+            <img class="popup__img-x" id="popup__img-x" src="img/X-img.png"></img>
+        </section>
+
         <section class="popular">
             <h2 class="popular__title">The most popular sales platform in country</h2>
             <div class="popular__container">
@@ -260,6 +268,19 @@
                 </article>
             </div>
         </section>
+
+        <div class="slider" id="slider">
+            <img class="slider__img-arrow slider__img-arrow--left" id="slider__img-arrow--left" src="img/slider arrow left.png">
+            <img class="slider__img-arrow slider__img-arrow--right" id="slider__img-arrow--right" src="img/slider arrow right.png">
+            <img class="slider__img-printed" id="slider__img-printed" src="img/slider cat white.png">
+            <div class="slider__container-position">
+                <button class="slider__container-position__btn" id="slider__container-position__btn-1"></button>
+                <button class="slider__container-position__btn" id="slider__container-position__btn-2"></button>
+                <button class="slider__container-position__btn" id="slider__container-position__btn-3"></button>
+                <button class="slider__container-position__btn" id="slider__container-position__btn-4"></button>
+                <button class="slider__container-position__btn" id="slider__container-position__btn-5"></button>
+            </div>
+        </div>
 
         <section class="contact">
             <div class="contact__container-left">

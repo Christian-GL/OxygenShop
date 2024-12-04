@@ -3,10 +3,10 @@ class ReturnToTheTop {
 
     getToTop() {
         const btnToTop = document.getElementById('return-top')
-        const si = new PercentageScroller()
+        const percentageScroller = new PercentageScroller()
 
         window.addEventListener('scroll', () => {
-            if (si.getPercentageScroll() >= 25) {
+            if (percentageScroller.getPercentageScroll() >= 25) {
                 btnToTop.style.visibility = 'visible'
             }
             else {
