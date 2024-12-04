@@ -25,6 +25,18 @@
   top: 2rem;
   right: 2rem;
 }
+.header__nav__img__hamburger {
+  display: block;
+}
+.header__nav__img__hamburger-js {
+  display: none;
+}
+.header__nav__img__x {
+  display: none;
+}
+.header__nav__img__x-js {
+  display: block;
+}
 @media only screen and (min-width: 1000px) {
   .header__nav__img {
     display: none;
@@ -70,6 +82,10 @@
   .header__nav__container__menu__option:hover {
     border-bottom: 5px solid #08A6E4;
   }
+}
+.header__nav__container__menu-js {
+  display: flex;
+  flex-direction: column;
 }
 .header__shop {
   margin-top: 6rem;

@@ -1,12 +1,11 @@
 
 class CoinConverter {
 
-    constructor(apiCoin) {
-        this.apiCoin = apiCoin
-        this.switchCoinType()       // <--arguumento?
+    constructor(coinConversions) {
+        this.coinConversions = coinConversions
     }
 
-    switchCoinType(conversions) {
+    switchCoinType() {
         const selectType = document.getElementById('prices__coin-type')
         const priceBasic = document.getElementById('prices__card__container-plan__price--basic')
         const priceProfessional = document.getElementById('prices__card__container-plan__price--professional')
@@ -18,24 +17,27 @@ class CoinConverter {
         window.addEventListener('change', () => {
             let type = parseInt(selectType.value)
             let symbol
-            conversions = [1.00, 0.95, 0.79]        // <-- Provisional
-            let basicConversion = (numberBasic * conversions[type - 1]).toFixed(2)
-            let professionalConversion = (numberProfessional * conversions[type - 1]).toFixed(2)
-            let premiumConversion = (numberPremium * conversions[type - 1]).toFixed(2)
-
+            let value
             switch (type) {
                 case 1:
-                symbol = '$'
+                    symbol = '$'
+                    value = this.coinConversions.getUsd
                     break;
                 case 2:
-                symbol = '€'
+                    symbol = '€'
+                    value = this.coinConversions.getEur
                     break;
                 case 3:
-                symbol = '£'
+                    symbol = '£'
+                    value = this.coinConversions.getGbp
                     break;
                 default:
                     break;
             }
+
+            let basicConversion = (numberBasic * value).toFixed(2)
+            let professionalConversion = (numberProfessional * value).toFixed(2)
+            let premiumConversion = (numberPremium * value).toFixed(2)
 
             priceBasic.innerHTML = `${symbol}${basicConversion}`
             priceProfessional.innerHTML = `${symbol}${professionalConversion}`

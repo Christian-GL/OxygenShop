@@ -12,23 +12,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
 
-    <!-- <script src="scripts-plantilla/Persona.js" defer></script>
-    <script src="scripts-plantilla/Panadero.js" defer></script>
-    <script src="scripts-plantilla/DomHandler.js" defer></script>
-    <script src="scripts-plantilla/API.js" defer></script>
-    <script src="scripts-plantilla/PersonsAPI.js" defer></script>
-    <script src="scripts-plantilla/script.js" defer></script> -->
-
-    <script src="js/components/Hamburguer.js" defer></script>
+    <script src="js/components/HamburgerMenu.js" defer></script>
     <script src="js/components/PercentageScroller.js" defer></script>
     <script src="js/components/ReturnToTheTop.js" defer></script>
     <script src="js/components/FormValidator.js" defer></script>
     
     <script src="js/api/CoinConversions.js" defer></script>
+    <script src="js/api/CoinConverter.js" defer></script>
     <script src="js/api/DomHandler.js" defer></script>
     <script src="js/api/API.js" defer></script>
     <script src="js/api/APICoin.js" defer></script>
-    <script src="js/api/CoinConverter.js" defer></script>
 
     <script src="js/index.js" defer></script>
     
@@ -39,9 +32,10 @@
     <header class="header">
         <nav class="header__nav">
             <h1 class="header__nav__title">OXYGEN Shop</h1>
-            <img class="header__nav__img" src="img/Menu.png"></img>
+            <img class="header__nav__img header__nav__img__hamburger" id="header__nav__img__hamburger" src="img/Menu.png"></img>
+            <img class="header__nav__img header__nav__img__x" id="header__nav__img__x" src="img/X-img.png"></img>
             <div class="header__nav__container">
-                <ul class="header__nav__container__menu">
+                <ul class="header__nav__container__menu" id="header__nav__container__menu">
                     <li class="header__nav__container__menu__option">Why us</li>
                     <li class="header__nav__container__menu__option">Benefits</li>
                     <li class="header__nav__container__menu__option">Prices</li>
@@ -57,7 +51,6 @@
             <img class="header__shop__img__mobile" src="img/Background mobile.png">
             <img class="header__shop__img__desktop" src="img/Background desktop.png">
         </div>
-        <div id="pruebasJS"></div>
     </header>
 
     <main class="main">

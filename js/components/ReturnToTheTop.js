@@ -1,4 +1,3 @@
-// import { getPercentageScroll } from './PercentageScroller.js';
 
 class ReturnToTheTop {
 
@@ -15,9 +14,9 @@ class ReturnToTheTop {
             }
         })
 
-        btnToTop.onclick = () => {
+        btnToTop.addEventListener('click', () => {
             window.scrollTo(0, 0);
             btnToTop.style.visibility = 'hidden'
-        }
+        })
     }
 }

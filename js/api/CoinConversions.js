@@ -2,18 +2,18 @@
 class CoinConversions {
 
     constructor(usd, eur, gbp) {
-        this.usd = usd
-        this.eur = eur
-        this.gbp = gbp
+        this._usd = usd
+        this._eur = eur
+        this._gbp = gbp
     }
 
-    getUsd() {
-        return this.usd
+    get getUsd() {
+        return this._usd
     }
-    getEur() {
-        return this.eur
+    get getEur() {
+        return this._eur
     }
-    getGbp() {
-        return this.gbp
+    get getGbp() {
+        return this._gbp
     }
 }

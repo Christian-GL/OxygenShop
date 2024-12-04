@@ -1,17 +1,25 @@
 
 class FormValidator {
 
-    tryValidation() {
-        const btnSend = document.getElementById('contact__container-right__container-btn__send')
-        const inputName = document.getElementById('contact__container-right__input-name')
-        const inputEmail = document.getElementById('contact__container-right__input-email')
-        const checkbox = document.getElementById('contact__container-right__container-terms__checkbox')
+    constructor(idBtn, idInputName, idInputEmail, idCheckbox) {
+        this.idBtn = idBtn
+        this.idInputName = idInputName
+        this.idInputEmail = idInputEmail
+        this.idCheckbox = idCheckbox
+    }
 
-        btnSend.onclick = () => {
+    tryValidation() {
+        const btnSend = document.getElementById(this.idBtn)
+        const inputName = document.getElementById(this.idInputName)
+        const inputEmail = document.getElementById(this.idInputEmail)
+        const checkbox = document.getElementById(this.idCheckbox)
+
+        btnSend.addEventListener('click', () => {
             if (this.checkAllValidations(inputName, inputEmail, checkbox)) {
                 this.sendData(inputName.value, inputEmail.value)
+                console.log('Enviado con exito')
             }
-        }
+        })
     }
 
     nameValidation(inputName) {

@@ -23,6 +23,18 @@
             position: absolute;
             top: 2rem;
             right: 2rem;
+                &__hamburger {
+                    display: block;
+                }
+                &__hamburger-js {
+                    display: none;
+                }
+                &__x {
+                    display: none;
+                }
+                &__x-js {
+                    display: block;
+                }
             @media only screen and (min-width: 1000px) {
                 display: none;
             }
@@ -63,6 +75,10 @@
                         }
                     }
                 }
+            }
+            &__menu-js {
+                display: flex;
+                flex-direction: column;
             }
         }
     }
