@@ -17,7 +17,7 @@ class FormValidator {
         btnSend.addEventListener('click', () => {
             if (this.checkAllValidations(inputName, inputEmail, checkbox)) {
                 this.sendData(inputName.value, inputEmail.value)
-                console.log('Enviado con exito')
+                alert('Enviado con exito')
             }
         })
     }

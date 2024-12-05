@@ -19,11 +19,12 @@ class Slider {
             'img/Slider cat Uh.png',
             'img/Slider cat ball.png']
         this.idImg = 0
+        
         this.switchColors(this.idImg)
         this.automaticAdvance()
     }
 
-    cosas() {
+    addListeners() {
         this.imgArrowLeft.addEventListener('click', () => {
             (this.idImg === 0) ? this.idImg = 4 : this.idImg--
             this.imgPrinted.src = this.listSrcImg[this.idImg]
@@ -36,7 +37,7 @@ class Slider {
             this.switchColors(this.idImg)
         })
 
-        for (let i = 0; i < this.listIdBtn.length; i++) {        // for each !!
+        for (let i = 0; i < this.listIdBtn.length; i++) {           // for each?
             this.listIdBtn[i].addEventListener('click', () => {
                 this.idImg = i
                 this.imgPrinted.src = this.listSrcImg[this.idImg]
@@ -45,11 +46,16 @@ class Slider {
         }
     }
 
-    switchColors() {     // for each !!
+    switchColors() {                                                // for each?
         for (let i = 0; i < this.listIdBtn.length; i++) {
-            (i === this.idImg) ?
-                this.listIdBtn[i].style.backgroundColor = 'yellow' :
-                this.listIdBtn[i].style.backgroundColor = 'white'
+            if (i === this.idImg) {
+                this.listIdBtn[i].classList.remove('slider__container-position__btn-white-js')
+                this.listIdBtn[i].classList.add('slider__container-position__btn-yellow-js')
+            }
+            else {
+                this.listIdBtn[i].classList.remove('slider__container-position__btn-yellow-js')
+                this.listIdBtn[i].classList.add('slider__container-position__btn-white-js')
+            }
         }
     }
 

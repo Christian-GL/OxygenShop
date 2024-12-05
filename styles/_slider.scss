@@ -42,11 +42,16 @@
             cursor: pointer;
             border-radius: 50%;
             border: 1px solid #000000;
-            background-color: #FFFFFF;
             @media only screen and (min-width: 1000px) {
                 margin: 0 0.35rem;
                 padding: 0.5em;
             }
+        }
+        &__btn-white-js {
+            background-color:#FFFFFF;
+        }
+        &__btn-yellow-js {
+            background-color: yellow;
         }
     }
 }

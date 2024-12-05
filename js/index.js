@@ -21,4 +21,4 @@ const popup = new Popup()
 popup.popupControl()
 
 const slider = new Slider()
-slider.cosas()
+slider.addListeners()
