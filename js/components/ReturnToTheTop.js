@@ -15,8 +15,10 @@ class ReturnToTheTop {
         })
 
         btnToTop.addEventListener('click', () => {
-            window.scrollTo(0, 0);
-            btnToTop.style.visibility = 'hidden'
+            window.setTimeout(() => {
+                window.scrollTo(0, 0);
+                btnToTop.style.visibility = 'hidden'
+            }, 200);
         })
     }
 }

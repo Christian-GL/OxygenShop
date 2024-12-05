@@ -101,6 +101,10 @@
             @media only screen and (min-width: 1000px) {
                 margin-top: 1.5rem;
             }
+
+            &__border1pxRed-js {
+                border: 1px solid red;
+            }
         }
         &__container-terms {
             position: relative;
@@ -115,6 +119,9 @@
                 border-radius: 5px;
                 @media only screen and (min-width: 1000px) {
                     cursor: pointer;
+                }
+                &__border2pxRed-js {
+                    border: 2px solid red;
                 }
 
                 &:checked {

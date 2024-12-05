@@ -835,6 +835,9 @@
     margin-top: 1.5rem;
   }
 }
+.contact__container-right__input__border1pxRed-js {
+  border: 1px solid red;
+}
 .contact__container-right__container-terms {
   position: relative;
   margin-top: 2rem;
@@ -853,6 +856,9 @@
   .contact__container-right__container-terms__checkbox {
     cursor: pointer;
   }
+}
+.contact__container-right__container-terms__checkbox__border2pxRed-js {
+  border: 2px solid red;
 }
 .contact__container-right__container-terms__checkbox:checked {
   background-color: transparent;

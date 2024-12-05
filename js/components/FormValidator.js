@@ -47,18 +47,22 @@ class FormValidator {
     checkAllValidations(inputName, inputEmail, checkbox) {
         if (!this.nameValidation(inputName)) {
             alert('El nombre debe tener entre 2 y 100 carácteres')
-            inputName.style.border = '1px solid red'
+            inputName.classList.add('contact__container-right__input__border1pxRed-js')
             return false
         }
+        inputName.classList.remove('contact__container-right__input__border1pxRed-js')
         if (!this.emailValidation(inputEmail)) {
             alert('Formato de email incorrecto')
-            inputEmail.style.border = '1px solid red'
+            inputEmail.classList.add('contact__container-right__input__border1pxRed-js')
             return false
         }
+        inputEmail.classList.remove('contact__container-right__input__border1pxRed-js')
         if (!this.checkboxValidation(checkbox)) {
             alert('Falta marcar el checkbox')
+            checkbox.classList.add('contact__container-right__container-terms__checkbox__border2pxRed-js')
             return false
         }
+        checkbox.classList.remove('contact__container-right__container-terms__checkbox__border2pxRed-js')
 
         return true
     }
