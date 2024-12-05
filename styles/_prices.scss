@@ -12,7 +12,7 @@
 
     &__coin-type {
         margin-top: 2.5rem;
-        padding: 0.5em;
+        padding: 0.3em;
         border-radius: 1rem;
         font-family: 'Open Sans';
         font-size: 2em;
@@ -62,26 +62,28 @@
         &__container-plan {
             display: inline-block;
             vertical-align: top;
+            margin-right: 0.5rem;
             @media only screen and (min-width: 1000px) {
                 position: relative;
                 display: block;
                 text-align: center;
+                margin-right: 0;
             }
             
             &--basic {
-                padding: 4.5em 2em 0;
+                padding: 4.5em 0 0;
                 @media only screen and (min-width: 1000px) {
                     padding: 0 0 1.4em 0;
                 }
             }
             &--professional {
-                padding: 3.5em 0.75em 0;
+                padding: 3.5em 0 0;
                 @media only screen and (min-width: 1000px) {
                     padding: 0;    
                 }
             }
             &--premium {
-                padding: 4em 1.5em 0;
+                padding: 4em 0 0;
                 @media only screen and (min-width: 1000px) {
                     padding: 0;    
                 }
@@ -93,7 +95,7 @@
             }
             &__price {
                 font-family: 'Open Sans';
-                font-size: 2.75em;
+                font-size: 2.5em;
                 font-weight: 300;
                 @media only screen and (min-width: 1000px) {
                     margin-top: 1rem;

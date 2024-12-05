@@ -1,51 +1,60 @@
 
 class Popup {
 
-    popupControl() {
-        const popupContainer = document.getElementById('popup')
-        const inputEmail = document.getElementById('popup__email')
-        const btnSuscribe = document.getElementById('popup__btn')
-        const imgX = document.getElementById('popup__img-x')
-        const scroll = new PercentageScroller()
-        const form = new FormValidator(null, null, 'popup__email', null)
+    constructor(idPopup) {
+        this.idPopup = idPopup
+        this.popupContainer = document.getElementById('popup')
         sessionStorage.setItem('displayed', 'false')
+
+        this.windowsEvents()
+        this.documentEvents()
+        this.elementEvents()
+    }
+
+    windowsEvents() {
+        const scroll = new PercentageScroller()
 
         window.addEventListener('scroll', () => {
             if (scroll.getPercentageScroll() >= 25 && sessionStorage.getItem('displayed') != 'true') {
-                popupContainer.classList.add('popup-js')
+                this.popupContainer.classList.add('popup-js')
                 sessionStorage.setItem('displayed', 'true')
             }
         })
         window.setTimeout(() => {
             if (sessionStorage.getItem('displayed') != 'true') {
-                popupContainer.classList.add('popup-js')
+                this.popupContainer.classList.add('popup-js')
                 sessionStorage.setItem('displayed', 'true')
             }
         }, 5000);
+    }
 
-        imgX.addEventListener('click', () => {
-            popupContainer.classList.remove('popup-js')
-        })
+    documentEvents() {
         document.addEventListener("keydown", (event) => {
             if (event.key === "Escape") {
-                popupContainer.classList.remove('popup-js')
+                this.popupContainer.classList.remove('popup-js')
             }
         })
         document.addEventListener('click', (event) => {
-            if (!popupContainer.contains(event.target)) {
-                popupContainer.classList.remove('popup-js')
+            if (!this.popupContainer.contains(event.target)) {
+                this.popupContainer.classList.remove('popup-js')
             }
         })
-        // window.addEventListener('scroll', scrollFunction)
-        // imgX.addEventListener('click', btnXFunction)
-        // document.addEventListener('keydown', escKeyFunction)
-        // document.addEventListener('click', clickOutsideFunction)
+    }
 
+    elementEvents() {
+        const inputEmail = document.getElementById('popup__email')
+        const btnSuscribe = document.getElementById('popup__btn')
+        const imgX = document.getElementById('popup__img-x')
+        const form = new FormValidator(null, null, 'popup__email', null)
+
+        imgX.addEventListener('click', () => {
+            this.popupContainer.classList.remove('popup-js')
+        })
         btnSuscribe.addEventListener('click', () => {
             if (form.emailValidation(inputEmail)) {
                 form.sendData('emailID', inputEmail.value)
                 alert('Sucripción realizada con exito')
-                popupContainer.classList.remove('popup-js')
+                this.popupContainer.classList.remove('popup-js')
             }
             else {
                 alert('Formato de email incorrecto')

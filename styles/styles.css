@@ -524,7 +524,7 @@
 }
 .prices__coin-type {
   margin-top: 2.5rem;
-  padding: 0.5em;
+  padding: 0.3em;
   border-radius: 1rem;
   font-family: "Open Sans";
   font-size: 2em;
@@ -579,16 +579,18 @@
 .prices__card__container-plan {
   display: inline-block;
   vertical-align: top;
+  margin-right: 0.5rem;
 }
 @media only screen and (min-width: 1000px) {
   .prices__card__container-plan {
     position: relative;
     display: block;
     text-align: center;
+    margin-right: 0;
   }
 }
 .prices__card__container-plan--basic {
-  padding: 4.5em 2em 0;
+  padding: 4.5em 0 0;
 }
 @media only screen and (min-width: 1000px) {
   .prices__card__container-plan--basic {
@@ -596,7 +598,7 @@
   }
 }
 .prices__card__container-plan--professional {
-  padding: 3.5em 0.75em 0;
+  padding: 3.5em 0 0;
 }
 @media only screen and (min-width: 1000px) {
   .prices__card__container-plan--professional {
@@ -604,7 +606,7 @@
   }
 }
 .prices__card__container-plan--premium {
-  padding: 4em 1.5em 0;
+  padding: 4em 0 0;
 }
 @media only screen and (min-width: 1000px) {
   .prices__card__container-plan--premium {
@@ -617,7 +619,7 @@
 }
 .prices__card__container-plan__price {
   font-family: "Open Sans";
-  font-size: 2.75em;
+  font-size: 2.5em;
   font-weight: 300;
 }
 @media only screen and (min-width: 1000px) {
@@ -963,19 +965,12 @@
   align-items: center;
   justify-content: center;
   padding: 1.5em;
-  left: 12.5%;
-  top: 25%;
-  width: 75%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 1rem;
   border: 1px solid #000000;
-  background-color: lightyellow;
-}
-@media only screen and (min-width: 1000px) {
-  .popup {
-    left: 25%;
-    width: 50%;
-    min-width: 20rem;
-  }
+  background-color: #FFFFFF;
 }
 .popup__title {
   text-align: center;
@@ -990,13 +985,18 @@
 }
 .popup__email {
   margin-top: 2rem;
-  width: 85%;
-  outline: none;
+  text-align: center;
+  border: 1px solid #95989A;
   border-top: none;
   border-right: none;
   border-left: none;
-  border: 1px solid #95989A;
   border-color: #95989A;
+  outline: none;
+}
+@media only screen and (min-width: 1000px) {
+  .popup__email {
+    width: 90%;
+  }
 }
 .popup__btn {
   margin-top: 2rem;
@@ -1041,15 +1041,15 @@
 }
 .slider__img-arrow {
   position: absolute;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 .slider__img-arrow--left {
-  top: 50%;
+  top: 45%;
   left: 2.5%;
 }
 .slider__img-arrow--right {
-  top: 50%;
+  top: 45%;
   right: 2.5%;
 }
 .slider__img-printed {
@@ -1081,7 +1081,7 @@
   background-color: #FFFFFF;
 }
 .slider__container-position__btn-yellow-js {
-  background-color: yellow;
+  background-color: #08A6E4;
 }
 
 * {
@@ -1109,7 +1109,7 @@ body {
   cursor: pointer;
   border-radius: 50%;
   visibility: hidden;
-  border: 1px solid black;
+  border: none;
   color: #FFFFFF;
   background-color: #08A6E4;
 }/*# sourceMappingURL=styles.css.map */

@@ -13,15 +13,15 @@
 
     &__img-arrow {
         position: absolute;
-        width: 2rem;
-        height: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
 
         &--left {
-            top: 50%;
+            top: 45%;
             left: 2.5%;
         }
         &--right {
-            top: 50%;
+            top: 45%;
             right: 2.5%;
         }
     }
@@ -51,7 +51,7 @@
             background-color:#FFFFFF;
         }
         &__btn-yellow-js {
-            background-color: yellow;
+            background-color: #08A6E4;
         }
     }
 }

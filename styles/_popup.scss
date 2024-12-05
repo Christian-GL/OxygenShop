@@ -7,17 +7,12 @@
     align-items: center;
     justify-content: center;
     padding: 1.5em;
-    left: 12.5%;
-    top: 25%;
-    width: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 1rem;
     border: 1px solid #000000;
-    background-color: lightyellow;
-    @media only screen and (min-width: 1000px) {
-        left: 25%;
-        width: 50%;
-        min-width: 20rem;
-    }
+    background-color: #FFFFFF;
 
     &__title {
         text-align: center;
@@ -31,13 +26,16 @@
 
     &__email {
         margin-top: 2rem;
-        width: 85%;
-        outline: none;
+        text-align: center;
+        border: 1px solid #95989A;
         border-top: none;
         border-right: none;
         border-left: none;
-        border: 1px solid #95989A;
         border-color: #95989A;
+        outline: none;
+        @media only screen and (min-width: 1000px) {
+            width: 90%;
+        }
     }
 
     &__btn {

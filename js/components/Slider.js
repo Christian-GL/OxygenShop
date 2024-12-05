@@ -6,22 +6,21 @@ class Slider {
         this.imgArrowLeft = document.getElementById('slider__img-arrow--left')
         this.imgArrowRight = document.getElementById('slider__img-arrow--right')
         this.imgPrinted = document.getElementById('slider__img-printed')
-        this.listIdBtn = [
-            document.getElementById('slider__container-position__btn-1'),
-            document.getElementById('slider__container-position__btn-2'),
-            document.getElementById('slider__container-position__btn-3'),
-            document.getElementById('slider__container-position__btn-4'),
-            document.getElementById('slider__container-position__btn-5')]
         this.listSrcImg = [
-            'img/Slider cat white.png',
-            'img/Slider cat Beluga.png',
-            'img/Slider cat mouth.png',
-            'img/Slider cat Uh.png',
-            'img/Slider cat ball.png']
+            'img/Slider 1.png',
+            'img/Slider 2.png',
+            'img/Slider 3.png',
+            'img/Slider 4.png',
+            'img/Slider 5.png']
+        this.listIdBtn = []
+        for (let i = 0; i < this.listSrcImg.length; i++) {
+            this.listIdBtn.push(document.getElementById(`slider__container-position__btn-${i + 1}`))
+        }
         this.idImg = 0
-        
+
         this.switchColors(this.idImg)
         this.automaticAdvance()
+        this.addListeners()
     }
 
     addListeners() {
@@ -32,12 +31,12 @@ class Slider {
         })
 
         this.imgArrowRight.addEventListener('click', () => {
-            (this.idImg === 4) ? this.idImg = 0 : this.idImg++
+            (this.idImg === this.listSrcImg.length - 1) ? this.idImg = 0 : this.idImg++
             this.imgPrinted.src = this.listSrcImg[this.idImg]
             this.switchColors(this.idImg)
         })
 
-        for (let i = 0; i < this.listIdBtn.length; i++) {           // for each?
+        for (let i = 0; i < this.listIdBtn.length; i++) {
             this.listIdBtn[i].addEventListener('click', () => {
                 this.idImg = i
                 this.imgPrinted.src = this.listSrcImg[this.idImg]
@@ -46,7 +45,7 @@ class Slider {
         }
     }
 
-    switchColors() {                                                // for each?
+    switchColors() {
         for (let i = 0; i < this.listIdBtn.length; i++) {
             if (i === this.idImg) {
                 this.listIdBtn[i].classList.remove('slider__container-position__btn-white-js')
@@ -61,7 +60,7 @@ class Slider {
 
     automaticAdvance() {
         setInterval(() => {
-            (this.idImg === 4) ? this.idImg = 0 : this.idImg++
+            (this.idImg === this.listSrcImg.length - 1) ? this.idImg = 0 : this.idImg++
             this.imgPrinted.src = this.listSrcImg[this.idImg]
             this.switchColors(this.idImg)
         }, 5000);

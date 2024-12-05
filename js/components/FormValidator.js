@@ -8,7 +8,7 @@ class FormValidator {
         this.idCheckbox = idCheckbox
     }
 
-    tryValidation() {
+    trySendAllValidations() {
         const btnSend = document.getElementById(this.idBtn)
         const inputName = document.getElementById(this.idInputName)
         const inputEmail = document.getElementById(this.idInputEmail)
