@@ -2,9 +2,6 @@
 class Slider {
 
     constructor() {
-        this.slider = document.getElementById('slider')
-        this.imgArrowLeft = document.getElementById('slider__img-arrow--left')
-        this.imgArrowRight = document.getElementById('slider__img-arrow--right')
         this.imgPrinted = document.getElementById('slider__img-printed')
         this.listSrcImg = [
             'img/Slider 1.png',
@@ -24,13 +21,16 @@ class Slider {
     }
 
     addListeners() {
-        this.imgArrowLeft.addEventListener('click', () => {
+        const imgArrowLeft = document.getElementById('slider__img-arrow--left')
+        const imgArrowRight = document.getElementById('slider__img-arrow--right')
+
+        imgArrowLeft.addEventListener('click', () => {
             (this.idImg === 0) ? this.idImg = 4 : this.idImg--
             this.imgPrinted.src = this.listSrcImg[this.idImg]
             this.switchColors(this.idImg)
         })
 
-        this.imgArrowRight.addEventListener('click', () => {
+        imgArrowRight.addEventListener('click', () => {
             (this.idImg === this.listSrcImg.length - 1) ? this.idImg = 0 : this.idImg++
             this.imgPrinted.src = this.listSrcImg[this.idImg]
             this.switchColors(this.idImg)
