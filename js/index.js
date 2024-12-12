@@ -5,6 +5,9 @@ hamburgerMenu.menuControl()
 const scroll = new PercentageScroller()
 scroll.addScrollToPage()
 
+const menu = new Menu()
+menu.addListeners()
+
 const returnTop = new ReturnToTheTop()
 returnTop.getToTop()
 

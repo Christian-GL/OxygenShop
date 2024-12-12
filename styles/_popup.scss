@@ -21,13 +21,14 @@
         font-size: 1.5em;
         font-weight: 700;
         @media only screen and (min-width: 1000px) {
-            font-size: 2.5em;
+            font-size: 2em;
         }
     }
 
     &__email {
         margin-top: 2rem;
         text-align: center;
+        font-family: 'Open Sans';
         border: 1px solid #95989A;
         border-top: none;
         border-right: none;
@@ -38,9 +39,20 @@
             width: 90%;
         }
     }
+    &__email::placeholder {
+        color: lightgray;
+        opacity: 1;
+    }
+
+    &__error-message {
+        margin-top: 0.5rem;
+        font-family: 'Open Sans';
+        font-size: 0.85em;
+        color: red;
+    }
 
     &__btn {
-        margin-top: 2rem;
+        margin-top: 1rem;
         padding: 1em 3em;
         font-family: 'Open Sans';
         font-size: 1em;

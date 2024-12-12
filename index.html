@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
 
     <script src="js/api/CoinConversions.js" defer></script>
     <script src="js/api/CoinConverter.js" defer></script>
@@ -20,12 +22,13 @@
 
     <script src="js/components/HamburgerMenu.js" defer></script>
     <script src="js/components/PercentageScroller.js" defer></script>
+    <script src="js/components/Menu.js" defer></script>
     <script src="js/components/ReturnToTheTop.js" defer></script>
     <script src="js/components/FormValidator.js" defer></script>
     <script src="js/components/Popup.js" defer></script>
     <script src="js/components/Slider.js" defer></script>
     <script src="js/index.js" defer></script>
-    
+
     <title>OXYGEN Shop</title>
 </head>
 
@@ -33,14 +36,15 @@
     <header class="header">
         <nav class="header__nav">
             <h1 class="header__nav__title">OXYGEN Shop</h1>
-            <img class="header__nav__img header__nav__img__hamburger" id="header__nav__img__hamburger" src="img/Menu.png"></img>
+            <img class="header__nav__img header__nav__img__hamburger" id="header__nav__img__hamburger"
+                src="img/Menu.png"></img>
             <img class="header__nav__img header__nav__img__x" id="header__nav__img__x" src="img/X-img.png"></img>
             <div class="header__nav__container">
                 <ul class="header__nav__container__menu" id="header__nav__container__menu">
-                    <li class="header__nav__container__menu__option">Why us</li>
-                    <li class="header__nav__container__menu__option">Benefits</li>
-                    <li class="header__nav__container__menu__option">Prices</li>
-                    <li class="header__nav__container__menu__option">Contact</li>
+                    <li class="header__nav__container__menu__option" id="header__nav__container__menu__option__whyus">Why us</li>
+                    <li class="header__nav__container__menu__option" id="header__nav__container__menu__option__benefits">Benefits</li>
+                    <li class="header__nav__container__menu__option" id="header__nav__container__menu__option__prices">Prices</li>
+                    <li class="header__nav__container__menu__option" id="header__nav__container__menu__option__contact">Contact</li>
                 </ul>
             </div>
         </nav>
@@ -57,13 +61,14 @@
     <main class="main">
         <section class="popup" id="popup">
             <h2 class="popup__title">Suscribe to<br>our newsletter</h2>
-            <input class="popup__email" id="popup__email" placeholder="christiangl.dev@gmail.com">
+            <input class="popup__email" id="popup__email" placeholder="Ejemplo: christiangl.dev@gmail.com">
+            <p class="popup__error-message" id="popup__error-message">&nbsp;</p>
             <button class="popup__btn" id="popup__btn">Suscribe!</button>
             <img class="popup__img-x" id="popup__img-x" src="img/X-img.png"></img>
         </section>
 
         <section class="popular">
-            <h2 class="popular__title">The most popular sales platform in country</h2>
+            <h2 class="popular__title" id="popular__title">The most popular sales platform in country</h2>
             <div class="popular__container">
                 <article class="popular__card">
                     <img src="img/Ellipse 1 red.png">
@@ -87,7 +92,7 @@
         </section>
 
         <section class="advertising">
-            <article class="advertising__card advertising__card--first">
+            <article class="advertising__card advertising__card--first" id="advertising__card--first">
                 <div class="advertising__card__container-img advertising__card__container-img--first">
                     <img class="advertising__card__container-img__rectangle1" src="img/Rectangle 1.png">
                     <img class="advertising__card__container-img__macbook" src="img/Macbook.png">
@@ -138,7 +143,7 @@
         </section>
 
         <section class="prices">
-            <h2 class="prices__title">Pricing</h2>
+            <h2 class="prices__title" id="prices__title">Pricing</h2>
             <select class="prices__coin-type" id="prices__coin-type">
                 <option value="1" selected="selected">$</option>
                 <option value="2">€</option>
@@ -148,7 +153,8 @@
                 <article class="prices__card prices__card--basic">
                     <div class="prices__card__container-plan prices__card__container-plan--basic">
                         <h3 class="prices__card__container-plan__title">Basic</h3>
-                        <h2 class="prices__card__container-plan__price prices__card__container-plan__price--basic" id="prices__card__container-plan__price--basic">$0.00</h2>
+                        <h2 class="prices__card__container-plan__price prices__card__container-plan__price--basic"
+                            id="prices__card__container-plan__price--basic">$0.00</h2>
                     </div>
                     <div class="prices__card__container-advantages">
                         <ul class="prices__card__container-advantages__list">
@@ -188,7 +194,8 @@
                 <article class="prices__card prices__card--professional">
                     <div class="prices__card__container-plan prices__card__container-plan--professional">
                         <h3 class="prices__card__container-plan__title">Professional</h3>
-                        <h2 class="prices__card__container-plan__price prices__card__container-plan__price--professional" id="prices__card__container-plan__price--professional">$25.00</h2>
+                        <h2 class="prices__card__container-plan__price prices__card__container-plan__price--professional"
+                            id="prices__card__container-plan__price--professional">$25.00</h2>
                         <h5 class="prices__card__container-plan__info">Limited offer</h5>
                     </div>
                     <div class="prices__card__container-advantages">
@@ -229,7 +236,8 @@
                 <article class="prices__card prices__card--premium">
                     <div class="prices__card__container-plan prices__card__container-plan--premium">
                         <h3 class="prices__card__container-plan__title">Premium</h3>
-                        <h2 class="prices__card__container-plan__price prices__card__container-plan__price--premium" id="prices__card__container-plan__price--premium">$60.00</h2>
+                        <h2 class="prices__card__container-plan__price prices__card__container-plan__price--premium"
+                            id="prices__card__container-plan__price--premium">$60.00</h2>
                         <h5 class="prices__card__container-plan__info">Limited offer</h5>
                     </div>
                     <div class="prices__card__container-advantages">
@@ -270,8 +278,10 @@
         </section>
 
         <div class="slider">
-            <img class="slider__img-arrow slider__img-arrow--left" id="slider__img-arrow--left" src="img/Slider arrow left.png">
-            <img class="slider__img-arrow slider__img-arrow--right" id="slider__img-arrow--right" src="img/Slider arrow right.png">
+            <img class="slider__img-arrow slider__img-arrow--left" id="slider__img-arrow--left"
+                src="img/Slider arrow left.png">
+            <img class="slider__img-arrow slider__img-arrow--right" id="slider__img-arrow--right"
+                src="img/Slider arrow right.png">
             <img class="slider__img-printed" id="slider__img-printed" src="img/Slider 1.png">
             <div class="slider__container-position">
                 <button class="slider__container-position__btn" id="slider__container-position__btn-1"></button>
@@ -284,29 +294,37 @@
 
         <section class="contact">
             <div class="contact__container-left">
-                <h2 class="contact__container-left__title">Any questions?</h2>
+                <h2 class="contact__container-left__title" id="contact__container-left__title">Any questions?</h2>
                 <h4 class="contact__container-left__msg">Leave your email address or call us!</h4>
 
                 <div
                     class="contact__container-left__container-info contact__container-left__container-info__container-mail">
                     <img class="contact__container-left__container-info__img" src="img/Mail Icon 2.png">
-                    <h5 class="contact__container-left__container-info__text">info@bestshop.xyz</h5>
+                    <h5 class="contact__container-left__container-info__text">christiangl.dev@gmail.com</h5>
                 </div>
 
                 <div
                     class="contact__container-left__container-info contact__container-left__container-info__container-phone">
                     <img class="contact__container-left__container-info__img" src="img/Phone Icon 2.png">
-                    <h5 class="contact__container-left__container-info__text">123 456 789</h5>
+                    <h5 class="contact__container-left__container-info__text">601 06 93 27</h5>
                 </div>
             </div>
             <div class="contact__container-right">
                 <h5 class="contact__container-right__title-input">name</h5>
-                <input class="contact__container-right__input" id="contact__container-right__input-name" placeholder="Christian">
-                <h5 class="contact__container-right__title-input">email</h5>
-                <input class="contact__container-right__input" id="contact__container-right__input-email" placeholder="christiangl.dev@gmail.com">
+                <input class="contact__container-right__input" id="contact__container-right__input-name"
+                    placeholder="Ejemplo: Christian">
+                <p class="contact__container-right__error-message" id="contact__container-right__error-message--name">
+                    &nbsp;</p>
+                <h5 class="contact__container-right__title-input contact__container-right__title-input--email">email
+                </h5>
+                <input class="contact__container-right__input" id="contact__container-right__input-email"
+                    placeholder="Ejemplo: christiangl.dev@gmail.com">
+                <p class="contact__container-right__error-message" id="contact__container-right__error-message--email">
+                    &nbsp;</p>
 
                 <div class="contact__container-right__container-terms">
-                    <input class="contact__container-right__container-terms__checkbox" id="contact__container-right__container-terms__checkbox" type="checkbox">
+                    <input class="contact__container-right__container-terms__checkbox"
+                        id="contact__container-right__container-terms__checkbox" type="checkbox">
                     <p class="contact__container-right__container-terms__text-terms">I hereby give consent for my
                         personal data included in my application to be processed for the purposes of the recruitment
                         process under the European Parliament’s and Council of the European Union Regulation on the
@@ -316,7 +334,8 @@
                 </div>
 
                 <div class="contact__container-right__container-btn">
-                    <button class="contact__container-right__container-btn__send" id="contact__container-right__container-btn__send">Send</button>
+                    <button class="contact__container-right__container-btn__send"
+                        id="contact__container-right__container-btn__send">Send</button>
                 </div>
             </div>
         </section>
@@ -328,8 +347,12 @@
         <h2 class="footer__title">OXYGEN Shop</h2>
         <h4 class="footer__text">© 2022 OXYGEN, All Rights Reserved</h4>
         <nav class="footer__nav">
-            <img class="footer__nav__img-twitter" src="img/Twitter.png"></img>
-            <img class="footer__nav__img-facebook" src="img/Facebook.png"></img>
+            <a class="footer__nav__link" href="https://github.com/Christian-GL" target="_blank">
+                <img class="footer__nav__link__img-twitter" src="img/Github.png"></img>
+            </a>
+            <a class="footer__nav__link" href="https://www.linkedin.com/in/christian-gil-ledesma-a9b536246/" target="_blank">
+                <img class="footer__nav__link__img-facebook" src="img/Linkedin.png"></img>
+            </a>
         </nav>
     </footer>
 </body>

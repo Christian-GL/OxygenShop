@@ -43,6 +43,7 @@ class Popup {
 
     elementEvents() {
         const inputEmail = document.getElementById('popup__email')
+        const errorMessage = document.getElementById('popup__error-message')
         const btnSuscribe = document.getElementById('popup__btn')
         const imgX = document.getElementById('popup__img-x')
         const form = new FormValidator(null, null, 'popup__email', null)
@@ -55,9 +56,10 @@ class Popup {
                 form.sendData('emailID', inputEmail.value)
                 alert('Sucripción realizada con exito')
                 this.popupContainer.classList.remove('popup-js')
+                errorMessage.innerHTML = `&nbsp;`
             }
             else {
-                alert('Formato de email incorrecto')
+                errorMessage.innerHTML = `Formato de email incorrecto`
             }
         })
     }

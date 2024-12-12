@@ -748,7 +748,7 @@
 }
 @media only screen and (min-width: 1000px) {
   .contact__container-left__title {
-    margin-top: 2.25rem;
+    margin-top: 1.75rem;
     font-size: 2.75rem;
   }
 }
@@ -820,9 +820,13 @@
     margin-top: 2.5rem;
   }
 }
+.contact__container-right__title-input--email {
+  margin-top: 1.5rem;
+}
 .contact__container-right__input {
   margin-top: 1rem;
   width: 100%;
+  font-family: "Open Sans";
   border: 1px solid #95989A;
   border-top: none;
   border-right: none;
@@ -838,9 +842,23 @@
 .contact__container-right__input__border1pxRed-js {
   border: 1px solid red;
 }
+.contact__container-right__input::-moz-placeholder {
+  color: lightgray;
+  opacity: 1;
+}
+.contact__container-right__input::placeholder {
+  color: lightgray;
+  opacity: 1;
+}
+.contact__container-right__error-message {
+  margin-top: 0.25rem;
+  font-family: "Open Sans";
+  font-size: 0.85em;
+  color: red;
+}
 .contact__container-right__container-terms {
   position: relative;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .contact__container-right__container-terms__checkbox {
   position: absolute;
@@ -946,19 +964,22 @@
   top: 1.5rem;
   right: 2.5rem;
 }
-.footer__nav__img-twitter {
+.footer__nav__link {
+  color: #FFF;
+}
+.footer__nav__link__img-twitter {
   margin: 0.5rem 0.5rem 0 0;
 }
 @media only screen and (min-width: 1000px) {
-  .footer__nav__img-twitter {
+  .footer__nav__link__img-twitter {
     cursor: pointer;
   }
 }
-.footer__nav__img-facebook {
+.footer__nav__link__img-facebook {
   margin: 0.5rem 0 0 0.5rem;
 }
 @media only screen and (min-width: 1000px) {
-  .footer__nav__img-facebook {
+  .footer__nav__link__img-facebook {
     cursor: pointer;
   }
 }
@@ -987,12 +1008,13 @@
 }
 @media only screen and (min-width: 1000px) {
   .popup__title {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 }
 .popup__email {
   margin-top: 2rem;
   text-align: center;
+  font-family: "Open Sans";
   border: 1px solid #95989A;
   border-top: none;
   border-right: none;
@@ -1005,8 +1027,22 @@
     width: 90%;
   }
 }
+.popup__email::-moz-placeholder {
+  color: lightgray;
+  opacity: 1;
+}
+.popup__email::placeholder {
+  color: lightgray;
+  opacity: 1;
+}
+.popup__error-message {
+  margin-top: 0.5rem;
+  font-family: "Open Sans";
+  font-size: 0.85em;
+  color: red;
+}
 .popup__btn {
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 1em 3em;
   font-family: "Open Sans";
   font-size: 1em;

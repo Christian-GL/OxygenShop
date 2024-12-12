@@ -21,7 +21,7 @@
             font-size: 2.5rem;
             font-weight: normal;
             @media only screen and (min-width: 1000px) {
-                margin-top: 2.25rem;
+                margin-top: 1.75rem;
                 font-size: 2.75rem;       
             }
         }
@@ -88,10 +88,14 @@
             @media only screen and (min-width: 1000px) {
                 margin-top: 2.5rem;
             }
+            &--email {
+                margin-top: 1.5rem;
+            }
         }
         &__input {
             margin-top: 1rem;
             width: 100%;
+            font-family: 'Open Sans';
             border: 1px solid #95989A;
             border-top: none;
             border-right: none;
@@ -101,14 +105,24 @@
             @media only screen and (min-width: 1000px) {
                 margin-top: 1.5rem;
             }
-
             &__border1pxRed-js {
                 border: 1px solid red;
             }
         }
+        &__input::placeholder {
+            color: lightgray;
+            opacity: 1;
+        }
+        &__error-message {
+            margin-top: 0.25rem;
+            font-family: 'Open Sans';
+            font-size: 0.85em;
+            color: red;
+        }
+
         &__container-terms {
             position: relative;
-            margin-top: 2rem;
+            margin-top: 1rem;
 
             &__checkbox {
                 position: absolute;
